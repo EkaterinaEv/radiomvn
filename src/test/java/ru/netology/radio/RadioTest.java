@@ -75,7 +75,8 @@ public class RadioTest {
         Assertions.assertEquals(expected, actual);
     }
 
-    @Test// new
+    @Test
+// new
     void setCurrentStationCheck() {
         Radio station = new Radio();
 
@@ -86,7 +87,8 @@ public class RadioTest {
         Assertions.assertEquals(expected, actual);
     }
 
-    @Test// new
+    @Test
+// new
     void setCurrentVolumeCheck() {
         Radio volume = new Radio();
 
@@ -97,7 +99,8 @@ public class RadioTest {
         Assertions.assertEquals(expected, actual);
     }
 
-    @Test// new
+    @Test
+// new
     void ifNextStationIsMaxRadio() {
         Radio next = new Radio();
 
@@ -109,7 +112,8 @@ public class RadioTest {
         Assertions.assertEquals(expected, actual);
     }
 
-    @Test// new
+    @Test
+// new
     void ifPrevStationIsMinRadio() {
         Radio prev = new Radio();
 
@@ -121,7 +125,8 @@ public class RadioTest {
         Assertions.assertEquals(expected, actual);
     }
 
-    @Test// new
+    @Test
+// new
     void increaseVolumeForMaxRadio() {
         Radio increase = new Radio();
 
@@ -133,7 +138,8 @@ public class RadioTest {
         Assertions.assertEquals(expected, actual);
     }
 
-    @Test// new
+    @Test
+// new
     void decreaseVolumeForMinRadio() {
         Radio decrease = new Radio();
 
@@ -141,6 +147,30 @@ public class RadioTest {
         decrease.decreaseVolume();
         int expected = 0;
         int actual = decrease.getCurrentVolume();
+
+        Assertions.assertEquals(expected, actual);
+    }
+
+    @Test
+// new
+    void setCurrentStationCheckOverMax() {
+        Radio station = new Radio();
+
+        station.setCurrentStation(12);
+        int expected = 0;
+        int actual = station.getCurrentStation();
+
+        Assertions.assertEquals(expected, actual);
+    }
+
+    @Test
+// new
+    void setCurrentVolumeCheckOverMax() {
+        Radio volume = new Radio();
+
+        volume.setCurrentVolume(110);
+        int expected = 0;
+        int actual = volume.getCurrentVolume();
 
         Assertions.assertEquals(expected, actual);
     }
