@@ -175,5 +175,56 @@ public class RadioTest {
         Assertions.assertEquals(expected, actual);
     }
 
+    // на пулл реквест
+    @Test
+    void ifGetMaxStationRadio() {
+        Radio ifGetMax = new Radio();
+
+        ifGetMax.getMaxStationRadio();
+        int expected = 9;
+        int actual = ifGetMax.getMaxStationRadio();
+
+        Assertions.assertEquals(expected, actual);
+    }
+
+    @Test
+    void ifGetMinStationRadio() {
+        Radio ifGetMin = new Radio();
+
+        ifGetMin.getMinStationRadio();
+        int expected = 0;
+        int actual = ifGetMin.getMinStationRadio();
+
+        Assertions.assertEquals(expected, actual);
+    }
+
+    @Test
+    void ifGetMaxVolumeRadio() {
+        Radio ifGetMaxV = new Radio();
+
+        ifGetMaxV.getMaxVolumeRadio();
+        int expected = 100;
+        int actual = ifGetMaxV.getMaxVolumeRadio();
+
+        Assertions.assertEquals(expected, actual);
+    }
+
+    @Test
+    void ifGetMinVolumeRadio() {
+        Radio ifGetMinV = new Radio();
+
+        ifGetMinV.getMinVolumeRadio();
+        int expected = 0;
+        int actual = ifGetMinV.getMinVolumeRadio();
+
+        Assertions.assertEquals(expected, actual);
+    }
+
+    @Test
+    void checkAmountOfStations() {
+        Radio amountCheck = new Radio(10);
+        int expected = 10;
+    }
+
 }
 
