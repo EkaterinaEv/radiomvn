@@ -226,5 +226,18 @@ public class RadioTest {
         int expected = 10;
     }
 
+    // ДОРАБОТКА
+    @Test
+    void nextStationRadioTest() {
+        Radio next = new Radio(20);
+
+        next.setCurrentStation(15);
+        next.nextStation();
+        int expected = 16;
+        int actual = next.getCurrentStation();
+
+        Assertions.assertEquals(expected, actual);
+    }
+
 }
 
